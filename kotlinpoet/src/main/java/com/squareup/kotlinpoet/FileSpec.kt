@@ -311,7 +311,7 @@ public class FileSpec private constructor(
       addImport(`class`.asClassName(), names)
 
     public fun addImport(className: ClassName, names: Iterable<String>): Builder = apply {
-      require("*" !in names) { "Wildcard imports are not allowed" }
+      // require("*" !in names) { "Wildcard imports are not allowed" }
       for (name in names) {
         memberImports += Import(className.canonicalName + "." + name)
       }
